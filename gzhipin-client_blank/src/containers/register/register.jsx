@@ -1,7 +1,7 @@
 
 import React,{Component} from "react";
 import {NavBar,List,WingBlank,WhiteSpace,InputItem,Radio,Button} from "antd-mobile"
-
+import {reqRegister} from "../../api/index"
 import Logo from "../../components/logo/logo"
 /*
 *注册路由的组件
@@ -21,7 +21,8 @@ export default class Register extends Component {
   };
 
   register =()=>{
-    console.log(this.state)
+    console.log("11111")
+    reqRegister(this.state)
   }
 
   handleChange =(name,val)=>{
@@ -42,7 +43,6 @@ export default class Register extends Component {
             <WhiteSpace/>
             <InputItem type="password" placeholder="请输入密码"
                        onChange={(val)=>this.handleChange("password",val)}>密码：</InputItem>
-
             <WhiteSpace/>
             <InputItem type="password2" placeholder="请再次输入密码"
                        onChange={(val)=>this.handleChange("password2",val)}>确认密码：</InputItem>

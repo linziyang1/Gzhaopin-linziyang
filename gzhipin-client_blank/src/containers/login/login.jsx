@@ -1,7 +1,7 @@
 
 import React,{Component} from "react";
 import {NavBar,List,WingBlank,WhiteSpace,InputItem,Radio,Button} from "antd-mobile"
-
+import {reqLogin} from "../../api/index"
 import Logo from "../../components/logo/logo"
 /*
 *注册路由的组件
@@ -19,7 +19,7 @@ export default class Register extends Component {
   };
 
   Login =()=>{
-    console.log(this.state)
+    reqLogin(this.state)
   }
 
   handleChange =(name,val)=>{
